@@ -315,4 +315,55 @@ body {
 }
 
 /*----------------------------------------------------*/
+.portfolio__heder {
+  margin: 100px 0px 60px 0px;
+}
+.portfolio__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+.portfolio__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #bdae82;
+  color: #bdae82;
+  line-height: 200%;
+  width: 220px;
+  height: 55px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 0px 60px 0px;
+}
+.portfolio__button:hover {
+  background-color: #bdae82;
+  color: #000;
+}
+.portfolio__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 25px 25px;
+}
+.portfolio__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.33%;
+          flex: 0 1 33.33%;
+  padding: 0px 0px 40% 0px;
+  max-width: 450px;
+}
+
+/*----------------------------------------------------*/
 /*----------------------------------------------------*/

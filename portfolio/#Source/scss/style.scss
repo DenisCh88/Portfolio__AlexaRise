@@ -190,11 +190,6 @@ body {
 /*----------------------------------------------------*/
 
 .skills {
-   // .skills__container
-
-   &__container {
-   }
-
    // .skills__header
 
    &__header {
@@ -246,6 +241,63 @@ body {
       line-height: 200%;
       margin: 0px 20px 10px 20px;
       text-align: center;
+   }
+}
+/*----------------------------------------------------*/
+
+.portfolio {
+   // .portfolio__heder
+
+   &__heder {
+      margin: 100px 0px 60px 0px;
+   }
+
+   // .portfolio__body
+
+   &__body {
+   }
+
+   // .portfolio__buttons
+
+   &__buttons {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+   }
+
+   // .portfolio__button
+
+   &__button {
+      display: flex;
+      border: 2px solid #bdae82;
+      color: #bdae82;
+      line-height: 200%;
+      width: 220px;
+      height: 55px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: 0px 0px 60px 0px;
+      &:hover {
+         background-color: #bdae82;
+         color: #000;
+      }
+   }
+
+   // .portfolio__images
+
+   &__images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px 25px;
+   }
+
+   // .portfolio__image
+
+   &__image {
+      flex: 0 1 33.33%;
+      padding: 0px 0px 40% 0px;
+      max-width: 450px;
    }
 }
 
