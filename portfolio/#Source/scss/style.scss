@@ -547,11 +547,6 @@ body {
 
 /*----------------------------------------------------*/
 .footer {
-   // .footer__container
-
-   &__container {
-   }
-
    // .footer__body
 
    &__body {
@@ -564,16 +559,6 @@ body {
 
    &__copy {
       display: flex;
-   }
-
-   // .footer__school
-
-   &__school {
-   }
-
-   // .footer__social
-
-   &__social {
    }
 }
 
@@ -649,11 +634,6 @@ body {
          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
             brightness(92%) contrast(87%);
       }
-   }
-
-   // .social__link
-
-   &__link {
    }
 }
 

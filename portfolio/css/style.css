@@ -664,6 +664,7 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+
 .copy__icon {
   line-height: calc(50 / 20 * 100%);
 }
@@ -722,4 +723,5 @@ body {
   -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
           filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
+
 /*----------------------------------------------------*/
