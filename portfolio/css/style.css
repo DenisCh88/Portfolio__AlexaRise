@@ -94,6 +94,11 @@ h6 {
 /* fonts
 &display=swap&subset=cyrillic-ext*/
 /*----------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*----------------------------------------------------*/
 body {
   font-family: Inter;
   font-size: 20px;
@@ -351,8 +356,13 @@ body {
   background-color: #000;
   font-size: 20px;
   line-height: 200%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .portfolio__button:hover {
+  color: #ffffff;
+}
+.portfolio__button_active {
   background-color: #bdae82;
   color: #000;
 }
@@ -638,4 +648,78 @@ body {
 }
 
 /*----------------------------------------------------*/
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.copy__icon {
+  line-height: calc(50 / 20 * 100%);
+}
+.copy__icon:not(:last-child) {
+  margin: 0px 20px 0px 0px;
+}
+.copy__year {
+  line-height: calc(50 / 20 * 100%);
+}
+.copy__year:not(:last-child) {
+  margin: 0px 20px 0px 0px;
+}
+.copy__github {
+  line-height: calc(50 / 20 * 100%);
+}
+.copy__github:not(:last-child) {
+  margin: 0px 20px 0px 0px;
+}
+
+.github__link {
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.github__link:hover {
+  color: #bdae82;
+}
+
+.school {
+  line-height: calc(50 / 20 * 100%);
+  padding: 50px 0px;
+  margin: 0px 0px 0px 15px;
+}
+.school__link {
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.school__link:hover {
+  color: #bdae82;
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.social__item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.social__item:not(:last-child) {
+  margin: 0px 20px 0px 0px;
+}
+.social__item:hover {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
 /*----------------------------------------------------*/
