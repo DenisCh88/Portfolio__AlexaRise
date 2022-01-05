@@ -249,6 +249,7 @@ body {
   max-width: 470px;
 }
 .hero__button {
+  padding: 8px 72px 7px 73px;
   background-color: #bdae82;
   color: #000000;
   line-height: calc(40 / 20 * 100%);
@@ -265,6 +266,8 @@ body {
   height: 55px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  font-size: 20px;
+  line-height: 200%;
 }
 .hero__button:hover {
   color: #ffffff;
@@ -345,6 +348,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0px 0px 60px 0px;
+  background-color: #000;
+  font-size: 20px;
+  line-height: 200%;
 }
 .portfolio__button:hover {
   background-color: #bdae82;
@@ -386,6 +392,8 @@ body {
   position: absolute;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background: none;
+  border: none;
 }
 .video__button:hover {
   -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
@@ -396,18 +404,21 @@ body {
 .price__header {
   margin: 100px 0px 60px 0px;
 }
+.price__body {
+  margin-bottom: 100px;
+}
 .price__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 25px;
+  height: 100%;
 }
 .price__item {
   border: 2px solid #bdae82;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.33%;
           flex: 0 1 33.33%;
-  height: 100%;
 }
 
 .item-price {
@@ -444,6 +455,9 @@ body {
   line-height: 200%;
   text-align: center;
   margin-bottom: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 .item-price__button {
   background-color: #bdae82;
@@ -464,9 +478,163 @@ body {
   margin-bottom: 43px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  font-size: 20px;
+  line-height: 200%;
 }
 .item-price__button:hover {
   color: #ffffff;
+}
+
+/*----------------------------------------------------*/
+.contacts {
+  position: relative;
+}
+.contacts__container {
+  position: relative;
+}
+.contacts__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+.contacts__body {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 32.15%;
+          flex: 0 1 32.15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 60px 0px 195px 0px;
+  z-index: 2;
+}
+.contacts__title {
+  font-weight: 700;
+  font-family: Merriweather;
+  font-size: 40px;
+  line-height: 200%;
+  color: #bdae82;
+  margin-bottom: 40px;
+}
+.contacts__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contacts__email {
+  border: 2px solid #bdae82;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #bdae82;
+  font-size: 20px;
+  line-height: 200%;
+  padding: 3px 0px 3px 20px;
+  margin-bottom: 20px;
+}
+.contacts__email::-webkit-input-placeholder {
+  color: #bdae82;
+}
+.contacts__email::-moz-placeholder {
+  color: #bdae82;
+}
+.contacts__email:-ms-input-placeholder {
+  color: #bdae82;
+}
+.contacts__email::-ms-input-placeholder {
+  color: #bdae82;
+}
+.contacts__email::placeholder {
+  color: #bdae82;
+}
+.contacts__phone {
+  border: 2px solid #bdae82;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #bdae82;
+  font-size: 20px;
+  line-height: 200%;
+  padding: 3px 0px 3px 20px;
+  margin-bottom: 21px;
+}
+.contacts__phone::-webkit-input-placeholder {
+  color: #bdae82;
+}
+.contacts__phone::-moz-placeholder {
+  color: #bdae82;
+}
+.contacts__phone:-ms-input-placeholder {
+  color: #bdae82;
+}
+.contacts__phone::-ms-input-placeholder {
+  color: #bdae82;
+}
+.contacts__phone::placeholder {
+  color: #bdae82;
+}
+.contacts__massage {
+  border: 2px solid #bdae82;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #bdae82;
+  font-size: 20px;
+  line-height: 200%;
+  padding: 3px 0px 11px 20px;
+  margin-bottom: 30px;
+  resize: none;
+}
+.contacts__massage::-webkit-input-placeholder {
+  color: #bdae82;
+}
+.contacts__massage::-moz-placeholder {
+  color: #bdae82;
+}
+.contacts__massage:-ms-input-placeholder {
+  color: #bdae82;
+}
+.contacts__massage::-ms-input-placeholder {
+  color: #bdae82;
+}
+.contacts__massage::placeholder {
+  color: #bdae82;
+}
+.contacts__button {
+  background-color: #bdae82;
+  color: #000000;
+  line-height: calc(40 / 20 * 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 220px;
+  height: 55px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  line-height: 200%;
+}
+.contacts__button:hover {
+  color: #ffffff;
+}
+.contacts__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 /*----------------------------------------------------*/
