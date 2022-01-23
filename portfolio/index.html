@@ -14,32 +14,46 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container _container">
-				<a href="" class="header__logo">
-					<img src="source/icons/logo/logo.svg" alt="logo_photocamera">
-				</a>
-				<nav class="header__menu">
-					<ul class="header__list">
-						<li class="header__item">
-							<a href="#skills" class="header__link">Skills</a>
-						</li>
-						<li class="header__item">
-							<a href="#portfolio" class="header__link">Portfolio</a>
-						</li>
-						<li class="header__item">
-							<a href="#video" class="header__link">Video</a>
-						</li>
-						<li class="header__item">
-							<a href="#price" class="header__link">Price</a>
-						</li>
-						<li class="header__item">
-							<a href="#contacts" class="header__link">Contacts</a>
-						</li>
-						<li class="header__item">
-							<a href="" class="header__link header__link_active">en </a> <span>/</span>
-							<a href="" class="header__link"> ru</a>
-						</li>
-					</ul>
-				</nav>
+				<div class="header__main">
+					<a href="" class="header__logo">
+						<img src="source/icons/logo/logo.svg" alt="logo_photocamera">
+					</a>
+					<div class="header__menu-min">
+						<span></span>
+					</div>
+					<nav class="header__menu">
+						<ul class="header__list">
+							<li class="header__item">
+								<a data-goto=".skills" href="#" class="header__link">Skills</a>
+							</li>
+							<li class="header__item">
+								<a data-goto=".portfolio" href="#" class="header__link">Portfolio</a>
+							</li>
+							<li class="header__item">
+								<a data-goto=".video" href="#" class="header__link">Video</a>
+							</li>
+							<li class="header__item">
+								<a data-goto=".price" href="#" class="header__link">Price</a>
+							</li>
+							<li class="header__item">
+								<a data-goto=".contacts" href="#" class="header__link">Contacts</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__language language">
+						<div class="language__radio-btn">
+							<input id="radio-1" type="radio" name="radio" value="1" checked>
+							<label for="radio-1">en</label>
+						</div>
+						<span>/</span>
+						<div class="language__radio-btn">
+							<input id="radio-2" type="radio" name="radio" value="2">
+							<label for="radio-2">ru</label>
+						</div>
+					</div>
+				</div>
+
+
 			</div>
 		</header>
 		<main class="main">
@@ -60,7 +74,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="skills" class="main__skills skills">
+			<section class="main__skills skills">
 				<div class="skills__container _container">
 					<div class="skills__header header-block">
 						<h2 class="header-block__title">
@@ -107,7 +121,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="portfolio" class="main__portfolio portfolio">
+			<section class="main__portfolio portfolio">
 				<div class="porfolio__container _container">
 					<div class="portfolio__heder header-block">
 						<h2 class="header-block__title">
@@ -116,10 +130,10 @@
 					</div>
 					<div class="portfolio__body">
 						<div class="portfolio__buttons">
-							<button class="portfolio__button">Winter</button>
-							<button class="portfolio__button">Spring</button>
+							<button class="portfolio__button"> Winter </button>
+							<button class="portfolio__button"> Spring </button>
 							<button class="portfolio__button">Summer</button>
-							<button class="portfolio__button portfolio__button_active">Autumn</button>
+							<button class="portfolio__button portfolio__button_active"> Autumn </button>
 						</div>
 						<div class="portfolio__images">
 							<div class="portfolio__column">
@@ -156,7 +170,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="video" class="main__video video">
+			<section class="main__video video">
 				<div class="video__container _container">
 					<div class="video__header header-block">
 						<h2 class="header-block__title">
@@ -174,7 +188,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="price" class="main__price price">
+			<section class="main__price price">
 				<div class="price__container _container">
 					<div class="price__header header-block">
 						<h2 class="header-block__title">
@@ -229,7 +243,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="contacts" class="main__contacts contacts">
+			<section class="main__contacts contacts">
 				<div class="contacts__container _container">
 					<div class="contacts__wrapper">
 						<div class="contacts__body">
@@ -237,7 +251,7 @@
 							<form class="contacts__form">
 								<input type="email" placeholder="E-mail" class="contacts__email">
 								<input type="tel" placeholder="Phone" class="contacts__phone">
-								<textarea rows="2" placeholder="Massage" class="contacts__massage"></textarea>
+								<textarea rows="2" placeholder="Message" class="contacts__massage"></textarea>
 								<button class="contacts__button">Send message</button>
 							</form>
 						</div>
@@ -289,6 +303,8 @@
 			</div>
 		</footer>
 	</div>
+
+	<script src="js/index.js"></script>
 </body>
 
 </html>
