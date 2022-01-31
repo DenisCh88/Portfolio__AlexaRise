@@ -173,7 +173,7 @@ body {
    &__menu-min {
       display: none;
       @media (max-width: 768px) {
-         order: 3;
+         order: 4;
          z-index: 5;
          display: block;
          flex: 0 0 50px;
@@ -229,7 +229,7 @@ body {
       display: flex;
       justify-content: end;
       @media (max-width: 768px) {
-         order: 3;
+         order: 4;
          justify-content: normal;
          position: fixed;
          left: 100%;
@@ -254,6 +254,19 @@ body {
                background-color: #000000e0;
             }
          }
+      }
+   }
+   &__theme {
+      margin: 0px 0px 0px 35px;
+      transition: all 0.3s ease;
+      &:hover {
+         filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+            brightness(92%) contrast(87%);
+         cursor: pointer;
+      }
+      @media (max-width: 768px) {
+         order: 3;
+         margin: 0px 30px 0px 30px;
       }
    }
 }

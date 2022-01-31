@@ -164,8 +164,7 @@ const changeLangClass =(e) => {
 		function getTranslate(lang) {
 			const actualLang = document.querySelectorAll('[data-i18]');
 
-			actualLang.forEach(item => item.textContent =  i18Obj[lang][item.dataset.i18])
-			console.log(actualLang); 
+			actualLang.forEach(item => item.textContent =  i18Obj[lang][item.dataset.i18]);
 		}
 		
 	}
