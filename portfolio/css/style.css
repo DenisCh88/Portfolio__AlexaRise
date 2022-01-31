@@ -118,7 +118,6 @@ body._lock {
      object-fit: cover;
 }
 
-/*----------------------------------------------------*/
 .header-block {
   text-align: center;
 }
@@ -169,6 +168,12 @@ body._lock {
     max-width: 364px;
     line-height: calc(80 / 32 * 100%);
   }
+}
+.header-block__title.header__block_light {
+  color: #000;
+}
+.header-block__title.header__block_light::before, .header-block__title.header__block_light::after {
+  background-color: #000;
 }
 
 /*----------------------------------------------------*/
@@ -425,7 +430,8 @@ body._lock {
 .language__radio-btn {
   display: inline-block;
 }
-.language .lang__btn {
+
+.lang__btn {
   background: transparent;
   border: none;
   font-weight: 700;
@@ -435,11 +441,21 @@ body._lock {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.language .lang__btn:hover {
+.lang__btn:hover {
   color: #bdae82;
 }
-.language .lang__btn.active {
+.lang__btn.active {
   color: #bdae82;
+}
+
+.light-theme-lang__btn {
+  color: #000;
+}
+.light-theme-lang__btn:hover {
+  color: #bdae82;
+}
+.light-theme-lang__btn.active {
+  color: #fff;
 }
 
 /*----------------------------------------------------*/
@@ -562,6 +578,12 @@ body._lock {
 }
 .hero__button:hover {
   color: #ffffff;
+}
+.hero__button.hero__button_theme {
+  background-color: #ffffff;
+}
+.hero__button.hero__button_theme:hover {
+  background-color: #000;
 }
 .hero__image {
   position: absolute;
@@ -738,6 +760,18 @@ body._lock {
 .portfolio__button.active {
   background-color: #bdae82;
   color: #000;
+}
+.portfolio__button.portfolio__button_theme {
+  color: #000;
+  background-color: #bdae82;
+}
+.portfolio__button.portfolio__button_theme:hover {
+  color: #bdae82;
+  background-color: #000;
+}
+.portfolio__button.portfolio__button_theme.active {
+  background-color: #000;
+  color: #bdae82;
 }
 .portfolio__images {
   display: -webkit-box;
@@ -969,6 +1003,10 @@ body._lock {
 .item-price__button:hover {
   color: #ffffff;
 }
+.item-price__button.item-price__button_theme:hover {
+  background-color: #000000;
+  color: #bdae82;
+}
 
 /*----------------------------------------------------*/
 .contacts {
@@ -1035,6 +1073,9 @@ body._lock {
     font-size: 32px;
   }
 }
+.contacts__title.contacts__title_theme {
+  color: #000;
+}
 .contacts__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1060,78 +1101,59 @@ body._lock {
     width: 300px;
   }
 }
-.contacts__email {
+.contacts__item {
   border: 2px solid #bdae82;
   background-color: rgba(0, 0, 0, 0.5);
   color: #bdae82;
   font-size: 20px;
   line-height: 200%;
+}
+.contacts__item::-webkit-input-placeholder {
+  color: #bdae82;
+}
+.contacts__item::-moz-placeholder {
+  color: #bdae82;
+}
+.contacts__item:-ms-input-placeholder {
+  color: #bdae82;
+}
+.contacts__item::-ms-input-placeholder {
+  color: #bdae82;
+}
+.contacts__item::placeholder {
+  color: #bdae82;
+}
+.contacts__item.contacts__item_theme {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+.contacts__item.contacts__item_theme::-webkit-input-placeholder {
+  color: #000;
+}
+.contacts__item.contacts__item_theme::-moz-placeholder {
+  color: #000;
+}
+.contacts__item.contacts__item_theme:-ms-input-placeholder {
+  color: #000;
+}
+.contacts__item.contacts__item_theme::-ms-input-placeholder {
+  color: #000;
+}
+.contacts__item.contacts__item_theme::placeholder {
+  color: #000;
+}
+.contacts__email {
   padding: 3px 0px 3px 20px;
   margin-bottom: 20px;
 }
-.contacts__email::-webkit-input-placeholder {
-  color: #bdae82;
-}
-.contacts__email::-moz-placeholder {
-  color: #bdae82;
-}
-.contacts__email:-ms-input-placeholder {
-  color: #bdae82;
-}
-.contacts__email::-ms-input-placeholder {
-  color: #bdae82;
-}
-.contacts__email::placeholder {
-  color: #bdae82;
-}
 .contacts__phone {
-  border: 2px solid #bdae82;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #bdae82;
-  font-size: 20px;
-  line-height: 200%;
   padding: 3px 0px 3px 20px;
   margin-bottom: 21px;
 }
-.contacts__phone::-webkit-input-placeholder {
-  color: #bdae82;
-}
-.contacts__phone::-moz-placeholder {
-  color: #bdae82;
-}
-.contacts__phone:-ms-input-placeholder {
-  color: #bdae82;
-}
-.contacts__phone::-ms-input-placeholder {
-  color: #bdae82;
-}
-.contacts__phone::placeholder {
-  color: #bdae82;
-}
 .contacts__massage {
-  border: 2px solid #bdae82;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #bdae82;
-  font-size: 20px;
-  line-height: 200%;
   padding: 3px 0px 11px 20px;
   margin-bottom: 30px;
   resize: none;
-}
-.contacts__massage::-webkit-input-placeholder {
-  color: #bdae82;
-}
-.contacts__massage::-moz-placeholder {
-  color: #bdae82;
-}
-.contacts__massage:-ms-input-placeholder {
-  color: #bdae82;
-}
-.contacts__massage::-ms-input-placeholder {
-  color: #bdae82;
-}
-.contacts__massage::placeholder {
-  color: #bdae82;
 }
 .contacts__button {
   background-color: #bdae82;
@@ -1162,6 +1184,12 @@ body._lock {
         -ms-grid-row-align: center;
         align-self: center;
   }
+}
+.contacts__button.contacts__button_theme {
+  background-color: #ffffff;
+}
+.contacts__button.contacts__button_theme:hover {
+  background-color: #000000;
 }
 .contacts__image {
   position: absolute;
@@ -1266,6 +1294,9 @@ body._lock {
 .school__link:hover {
   color: #bdae82;
 }
+.school__link.school__link_theme {
+  color: #000;
+}
 
 .social__list {
   display: -webkit-box;
@@ -1287,6 +1318,12 @@ body._lock {
 .social__item:hover {
   -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
           filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+/*----------------------------------------------------*/
+.light-theme {
+  background-color: #fff;
+  color: #000;
 }
 
 /*----------------------------------------------------*/

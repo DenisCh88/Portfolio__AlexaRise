@@ -172,8 +172,81 @@ const changeLangClass =(e) => {
 
 radioBtns.addEventListener('click', changeLangClass);
 
+const themeBtns = document.querySelector('.header__theme');
+const themeBtn = document.querySelector('.header__theme-img');
+const heroTheme = document.querySelector('.hero__img');
+const contactsTheme = document.querySelector('.contacts__img');
+const logoTheme = document.querySelector('.header__logo-img');
 
+const themeWrapper = document.querySelector('.wrapper');
+const themeLangBtn = document.querySelectorAll('.lang__btn');
+const headerBlockTitleTheme = document.querySelectorAll('.header-block__title');
+const portfolioButtonTheme = document.querySelectorAll('.portfolio__button ');
+const heroButtonTheme = document.querySelectorAll('.hero__button');
+const priceBtnTheme = document.querySelectorAll('.item-price__button');
+const contactTitleTheme = document.querySelector('.contacts__title');
+const contactsItemTheme = document.querySelectorAll('.contacts__item');
+const contactsButtonTheme = document.querySelector('.contacts__button')
+const schoolLinkTheme = document.querySelector('.school__link');
 
+const instagramTheme = document.querySelector('.instagram');
+const facebookTheme = document.querySelector('.facebook');
+const twiterTheme = document.querySelector('.twiter');
+const pintrestTheme = document.querySelector('.pintrest');
+
+themeBtns.addEventListener('click', themeBtnChange);
+
+function themeBtnChange(e){
+	if(e.target.classList.contains('header__theme-img')){
+		document.body.classList.toggle('dark');
+		if(document.body.classList.contains('dark')){
+
+			themeWrapper.classList.add('light-theme');
+			contactTitleTheme.classList.add('contacts__title_theme');
+			contactsButtonTheme.classList.add('contacts__button_theme');
+			schoolLinkTheme.classList.add('school__link_theme');
+			
+			themeLangBtn.forEach(item => item.classList.add('light-theme-lang__btn'));
+			headerBlockTitleTheme.forEach(item => item.classList.add('header__block_light'));
+			portfolioButtonTheme.forEach(item => item.classList.add('portfolio__button_theme'));
+			heroButtonTheme.forEach(item => item.classList.add('hero__button_theme'));
+			priceBtnTheme.forEach(item => item.classList.add('item-price__button_theme'));
+			contactsItemTheme.forEach(item => item.classList.add('contacts__item_theme'));
+
+			logoTheme.src = 'source/icons/logo/logo-1.svg';
+			contactsTheme.src = 'source/img/contacts/contacts-light.jpg';
+			heroTheme.src = 'source/img/hero/bg-light.jpg';			
+			themeBtn.src = 'source/icons/theme/moon.svg';
+
+			instagramTheme.src = 'source/icons/footer/inst-light.svg';
+			facebookTheme.src = 'source/icons/footer/fb-light.svg';
+			twiterTheme.src = 'source/icons/footer/tw-light.svg';
+			pintrestTheme.src = 'source/icons/footer/pinterest-light.svg';
+		} else {
+			themeWrapper.classList.remove('light-theme');
+			contactTitleTheme.classList.remove('contacts__title_theme');
+			contactsButtonTheme.classList.remove('contacts__button_theme');
+			schoolLinkTheme.classList.remove('school__link_theme');
+
+			themeLangBtn.forEach(item => item.classList.remove('light-theme-lang__btn'));
+			headerBlockTitleTheme.forEach(item => item.classList.remove('header__block_light'));
+			portfolioButtonTheme.forEach(item => item.classList.remove('portfolio__button_theme'));
+			heroButtonTheme.forEach(item => item.classList.remove('hero__button_theme'));
+			priceBtnTheme.forEach(item => item.classList.remove('item-price__button_theme'));
+			contactsItemTheme.forEach(item => item.classList.remove('contacts__item_theme'));
+
+			logoTheme.src = 'source/icons/logo/logo.svg';
+			contactsTheme.src = 'source/img/contacts/contacts.jpg';
+			heroTheme.src = 'source/img/hero/bg.jpg';	
+			themeBtn.src = 'source/icons/theme/sun.svg';
+
+			instagramTheme.src = 'source/icons/footer/inst.svg';
+			facebookTheme.src = 'source/icons/footer/fb.svg';
+			twiterTheme.src = 'source/icons/footer/tw.svg';
+			pintrestTheme.src = 'source/icons/footer/pinterest.svg';
+		}
+	}
+}
 
 
 

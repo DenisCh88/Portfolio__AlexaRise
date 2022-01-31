@@ -25,7 +25,7 @@ body {
       object-fit: cover;
    }
 }
-/*----------------------------------------------------*/
+
 .header-block {
    text-align: center;
 
@@ -73,8 +73,16 @@ body {
          max-width: 364px;
          line-height: calc(80 / 32 * 100%);
       }
+      &.header__block_light {
+         color: #000;
+         &::before,
+         &::after {
+            background-color: #000;
+         }
+      }
    }
 }
+
 /*----------------------------------------------------*/
 .wrapper {
    min-height: 100%;
@@ -274,23 +282,31 @@ body {
    &__radio-btn {
       display: inline-block;
    }
-   .lang__btn {
-      background: transparent;
-      border: none;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 50px;
-      color: #ffffff;
-      transition: all 0.3s ease;
-      &:hover {
-         color: #bdae82;
-      }
-      &.active {
-         color: #bdae82;
-      }
+}
+.lang__btn {
+   background: transparent;
+   border: none;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 50px;
+   color: #ffffff;
+   transition: all 0.3s ease;
+   &:hover {
+      color: #bdae82;
+   }
+   &.active {
+      color: #bdae82;
    }
 }
-
+.light-theme-lang__btn {
+   color: #000;
+   &:hover {
+      color: #bdae82;
+   }
+   &.active {
+      color: #fff;
+   }
+}
 /*----------------------------------------------------*/
 .main {
    flex: 1 1 auto;
@@ -388,6 +404,12 @@ body {
       line-height: 200%;
       &:hover {
          color: #ffffff;
+      }
+      &.hero__button_theme {
+         background-color: #ffffff;
+         &:hover {
+            background-color: #000;
+         }
       }
    }
 
@@ -550,6 +572,18 @@ body {
       &.active {
          background-color: #bdae82;
          color: #000;
+      }
+      &.portfolio__button_theme {
+         color: #000;
+         background-color: #bdae82;
+         &:hover {
+            color: #bdae82;
+            background-color: #000;
+         }
+         &.active {
+            background-color: #000;
+            color: #bdae82;
+         }
       }
    }
 
@@ -746,6 +780,12 @@ body {
       &:hover {
          color: #ffffff;
       }
+      &.item-price__button_theme {
+         &:hover {
+            background-color: #000000;
+            color: #bdae82;
+         }
+      }
    }
 }
 /*----------------------------------------------------*/
@@ -796,6 +836,9 @@ body {
       @media (max-width: 992px) {
          font-size: 32px;
       }
+      &.contacts__title_theme {
+         color: #000;
+      }
    }
 
    // .contacts__form
@@ -814,51 +857,43 @@ body {
          width: 300px;
       }
    }
-
-   // .contacts__email
-
-   &__email {
+   &__item {
       border: 2px solid #bdae82;
       background-color: rgba(0, 0, 0, 0.5);
       color: #bdae82;
       font-size: 20px;
       line-height: 200%;
-      padding: 3px 0px 3px 20px;
-      margin-bottom: 20px;
       &::placeholder {
          color: #bdae82;
       }
+      &.contacts__item_theme {
+         background-color: rgba(255, 255, 255, 0.5);
+         color: #000;
+         &::placeholder {
+            color: #000;
+         }
+      }
+   }
+   // .contacts__email
+
+   &__email {
+      padding: 3px 0px 3px 20px;
+      margin-bottom: 20px;
    }
 
    // .contacts__phone
 
    &__phone {
-      border: 2px solid #bdae82;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #bdae82;
-      font-size: 20px;
-      line-height: 200%;
       padding: 3px 0px 3px 20px;
       margin-bottom: 21px;
-      &::placeholder {
-         color: #bdae82;
-      }
    }
 
    // .contacts__massage
 
    &__massage {
-      border: 2px solid #bdae82;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #bdae82;
-      font-size: 20px;
-      line-height: 200%;
       padding: 3px 0px 11px 20px;
       margin-bottom: 30px;
       resize: none;
-      &::placeholder {
-         color: #bdae82;
-      }
    }
 
    // .contacts__button
@@ -880,6 +915,12 @@ body {
       }
       @media (max-width: 992px) {
          align-self: center;
+      }
+      &.contacts__button_theme {
+         background-color: #ffffff;
+         &:hover {
+            background-color: #000000;
+         }
       }
    }
 
@@ -983,6 +1024,9 @@ body {
       &:hover {
          color: #bdae82;
       }
+      &.school__link_theme {
+         color: #000;
+      }
    }
 }
 .social {
@@ -1009,4 +1053,9 @@ body {
    }
 }
 
+/*----------------------------------------------------*/
+.light-theme {
+   background-color: #fff;
+   color: #000;
+}
 /*----------------------------------------------------*/
