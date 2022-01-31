@@ -260,21 +260,20 @@ body {
 .language {
    &__radio-btn {
       display: inline-block;
-
-      & input[type="radio"] {
-         display: none;
-      }
-      & label {
-         cursor: pointer;
-      }
-      & input[type="radio"]:checked + label {
+   }
+   .lang__btn {
+      background: transparent;
+      border: none;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 50px;
+      color: #ffffff;
+      transition: all 0.3s ease;
+      &:hover {
          color: #bdae82;
       }
-      & label {
-         transition: all 0.3s ease;
-         &:hover {
-            color: #bdae82;
-         }
+      &.active {
+         color: #bdae82;
       }
    }
 }

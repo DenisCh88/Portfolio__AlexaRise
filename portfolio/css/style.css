@@ -407,20 +407,20 @@ body._lock {
 .language__radio-btn {
   display: inline-block;
 }
-.language__radio-btn input[type=radio] {
-  display: none;
-}
-.language__radio-btn label {
-  cursor: pointer;
-}
-.language__radio-btn input[type=radio]:checked + label {
-  color: #bdae82;
-}
-.language__radio-btn label {
+.language .lang__btn {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 50px;
+  color: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.language__radio-btn label:hover {
+.language .lang__btn:hover {
+  color: #bdae82;
+}
+.language .lang__btn.active {
   color: #bdae82;
 }
 

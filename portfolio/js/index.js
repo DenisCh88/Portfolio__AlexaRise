@@ -150,8 +150,32 @@ function changeImage(event) {
 
  preloadImages(seasons);
 
+const radioLang = document.querySelectorAll('.lang__btn');
+const radioBtns = document.querySelector('.header__language');
+const radioBtn = document.querySelector('.lang__btn');
+const changeLangClass =(e) => {
+	if(e.target.classList.contains('lang__btn')){
+		radioLang.forEach(item => item.classList.remove('active'));
+		e.target.classList.add('active');
+		const lang = e.target.dataset.lang;
 
- getTranslate()
+		getTranslate(lang);
+
+		function getTranslate(lang) {
+			const actualLang = document.querySelectorAll('[data-i18]');
+
+			actualLang.forEach(item => item.textContent =  i18Obj[lang][item.dataset.i18])
+			console.log(actualLang); 
+		}
+		
+	}
+}
+
+radioBtns.addEventListener('click', changeLangClass);
+
+
+
+
 
 
 
