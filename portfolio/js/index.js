@@ -38,3 +38,44 @@ if (headerLinks.length > 0) {
 		}
 	}
 }
+
+const portfolioBtn = document.querySelectorAll('.portfolio__button');
+const portfolioImages = document.querySelectorAll('.portfolio__img');
+const portfolioBtns = document.querySelector('.portfolio__buttons');
+
+portfolioBtns.addEventListener('click', changeImage);
+
+function changeImage(event) {
+	if(event.target.classList.contains('portfolio__button')) {
+			portfolioImages.forEach((img, index) => img.src = `source/img/portfolio/${event.target.dataset.season}/${index + 1}.jpg`);
+		portfolioBtn.forEach(item => item.classList.remove('active'));
+		event.target.classList.add('active');
+	}
+ }
+
+
+ const seasons = ['winter', 'spring', 'summer', 'autumn'];
+
+ function preloadImages(seasons) {
+	seasons.forEach( el => {
+		for(let i = 1; i <= 6; i++) {
+			const img = new Image();
+			img.src = `source/img/portfolio/${el}/${i}.jpg`;
+		 }
+	})
+
+ }
+
+ preloadImages(seasons);
+
+
+
+
+
+
+
+
+
+
+
+
