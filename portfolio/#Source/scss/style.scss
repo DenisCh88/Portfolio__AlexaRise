@@ -230,6 +230,13 @@ body {
                transform: rotate(45deg) translate(0, 50%);
             }
          }
+         &.header__menu-min_theme {
+            & span,
+            &::after,
+            &::before {
+               background-color: #000;
+            }
+         }
       }
    }
    &__menu {
@@ -245,11 +252,9 @@ body {
          height: 100%;
          width: 620px;
          transition: left 0.3s ease 0s;
-         background-color: #000000;
          &._active {
             position: fixed;
             top: 0;
-
             left: 148px;
             height: 100%;
             width: 620px;
@@ -260,6 +265,12 @@ body {
                left: 0;
                padding: 128px 0px 0px 20px;
                background-color: #000000e0;
+            }
+            &._active_theme {
+               background-color: #ffffff;
+               @media (max-width: 449px) {
+                  background-color: #ffffffbe;
+               }
             }
          }
       }

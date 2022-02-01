@@ -193,6 +193,8 @@ const instagramTheme = document.querySelector('.instagram');
 const facebookTheme = document.querySelector('.facebook');
 const twiterTheme = document.querySelector('.twiter');
 const pintrestTheme = document.querySelector('.pintrest');
+const burgerMenuTheme = document.querySelector('.header__menu-min');
+const headerMenuActiveTheme = document.querySelector('.header__menu');
 
 themeBtns.addEventListener('click', themeBtnChange);
 
@@ -205,6 +207,8 @@ function themeBtnChange(e){
 			contactTitleTheme.classList.add('contacts__title_theme');
 			contactsButtonTheme.classList.add('contacts__button_theme');
 			schoolLinkTheme.classList.add('school__link_theme');
+			burgerMenuTheme.classList.add('header__menu-min_theme');
+			headerMenuActiveTheme.classList.add('_active_theme');
 			
 			themeLangBtn.forEach(item => item.classList.add('light-theme-lang__btn'));
 			headerBlockTitleTheme.forEach(item => item.classList.add('header__block_light'));
@@ -227,6 +231,8 @@ function themeBtnChange(e){
 			contactTitleTheme.classList.remove('contacts__title_theme');
 			contactsButtonTheme.classList.remove('contacts__button_theme');
 			schoolLinkTheme.classList.remove('school__link_theme');
+			burgerMenuTheme.classList.remove('header__menu-min_theme');
+			headerMenuActiveTheme.classList.remove('_active_theme');
 
 			themeLangBtn.forEach(item => item.classList.remove('light-theme-lang__btn'));
 			headerBlockTitleTheme.forEach(item => item.classList.remove('header__block_light'));
