@@ -185,18 +185,18 @@
 					</div>
 					<div class="video__body">
 						<div class="video__player player">
-							<video src="source/video/video.mp4" class="player__video viewer" autoplay muted></video>
+							<div class="video__poster"></div>
+							<video src="source/video/video.mp4" class="player__video viewer"></video>
+							<div class="video__play-btn"></div>
 							<div class="player__controls">
 								<button class="player__button toggle" title="Toggle Play">
 									<img src="source/icons/video/play.svg" alt="play" class="play-immage">
 								</button>
-								<div class="progress">
-									<div class="progress__filled"></div>
-								</div>
+								<input type="range" name="progress" min="0" max="1" step="0.01" value="0.00" class="progress">
 								<button class="player__button toggle" title="Toggle Play">
 									<img src="source/icons/video/volume.svg" alt="play" class="volume-immage">
 								</button>
-								<input type="range" name="volume" min="0" max="1" step="0.05" value="1" class="player__slider">
+								<input type="range" name="volume" min="0" max="1" step="0.05" value=0.4" class="volume">
 
 							</div>
 						</div>
