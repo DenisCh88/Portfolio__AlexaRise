@@ -267,6 +267,7 @@ const volume = player.querySelector('.volume');
 const progress = player.querySelector('.progress');
 const poster = player.querySelector('.video__poster');
 const centralPlayBtn = player.querySelector('.video__play-btn');
+const range = player.querySelectorAll('.range');
 
 function togglePlay(){
 	const method = video.paused ? 'play' : 'pause';
@@ -287,7 +288,9 @@ function volumeRangeUpdate(){
 	} else {
 		volumeBtn.src = 'source/icons/video/volume.svg'
 	}
-
+	if (video.muted){
+		video.muted = !video.muted;
+	}
 }
 
 function progressRangeUpdate(){
@@ -310,27 +313,38 @@ function updateVolumeButton(){
 
 function posterHide(){
 	poster.style.display = 'none';
-	
 	video.play();
 }
 
+function rangeProgress(){
+	const value = this.value*100;
+	const playerProgress = video.currentTime/video.duration*100;
+	console.log(this.name)
+	this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`;
+	progress.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${playerProgress}%, #c8c8c8 ${playerProgress}%, #c8c8c8 100%)`;
+}
 
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 video.addEventListener('timeupdate', handleRangeUpdate);
+video.addEventListener('timeupdate', rangeProgress);
 
 playBtn.addEventListener('click', togglePlay);
 
 volume.addEventListener('change', volumeRangeUpdate);
 volume.addEventListener('input', volumeRangeUpdate);
+volume.addEventListener('mouseup', function(){
+	
+});
+
 progress.addEventListener('change', progressRangeUpdate);
 progress.addEventListener('input', progressRangeUpdate);
 
 volumeBtn.addEventListener('click', updateVolumeButton);
 poster.addEventListener('click',posterHide);
-centralPlayBtn.addEventListener('click', posterHide)
+centralPlayBtn.addEventListener('click', posterHide);
 
-
+range.forEach(item => item.addEventListener('input', rangeProgress));
 
 

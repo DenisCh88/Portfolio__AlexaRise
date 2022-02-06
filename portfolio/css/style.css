@@ -976,9 +976,13 @@ body._lock {
           flex: 0 1 auto;
 }
 
+.play-immage {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
 .play-immage:hover, .play-immage:active {
-  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
-          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%) drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.7));
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%) drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.7));
 }
 
 .progress {
@@ -987,9 +991,13 @@ body._lock {
           flex: 0 1 65%;
 }
 
-.volume-immage:hover {
-  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
-          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+.volume-immage {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.volume-immage:hover, .volume-immage:active {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%) drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.7));
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%) drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.7));
 }
 
 .volume {
@@ -999,8 +1007,8 @@ body._lock {
   margin: 0px 40px 0px 0px;
 }
 
-.progress,
-.volume {
+.volume,
+.progress {
   background: -webkit-gradient(linear, left top, right top, from(#bdae82), color-stop(0%, #bdae82), color-stop(0%, #c8c8c8), to(#c8c8c8));
   background: linear-gradient(to right, #bdae82 0%, #bdae82 0%, #c8c8c8 0%, #c8c8c8 100%);
   margin: auto 0;
@@ -1009,6 +1017,11 @@ body._lock {
   -webkit-transition: background 450ms ease-in;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
+}
+
+.volume {
+  background: -webkit-gradient(linear, left top, right top, from(#bdae82), color-stop(30%, #bdae82), color-stop(30%, #c8c8c8), to(#c8c8c8));
+  background: linear-gradient(to right, #bdae82 0%, #bdae82 30%, #c8c8c8 30%, #c8c8c8 100%);
 }
 
 .progress::-webkit-slider-thumb,
