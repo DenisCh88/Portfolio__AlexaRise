@@ -195,6 +195,7 @@ const twiterTheme = document.querySelector('.twiter');
 const pintrestTheme = document.querySelector('.pintrest');
 const burgerMenuTheme = document.querySelector('.header__menu-min');
 const headerMenuActiveTheme = document.querySelector('.header__menu');
+const playerBtns = document.querySelectorAll('.player__button');
 
 themeBtns.addEventListener('click', themeBtnChange);
 
@@ -216,6 +217,7 @@ function themeBtnChange(e){
 			heroButtonTheme.forEach(item => item.classList.add('hero__button_theme'));
 			priceBtnTheme.forEach(item => item.classList.add('item-price__button_theme'));
 			contactsItemTheme.forEach(item => item.classList.add('contacts__item_theme'));
+			playerBtns.forEach(item => item.style.background = 'rgb(255,255,255)');
 
 			logoTheme.src = 'source/icons/logo/logo-1.svg';
 			contactsTheme.src = 'source/img/contacts/contacts-light.jpg';
@@ -240,7 +242,8 @@ function themeBtnChange(e){
 			heroButtonTheme.forEach(item => item.classList.remove('hero__button_theme'));
 			priceBtnTheme.forEach(item => item.classList.remove('item-price__button_theme'));
 			contactsItemTheme.forEach(item => item.classList.remove('contacts__item_theme'));
-
+			playerBtns.forEach(item => item.style.background = 'rgb(0,0,0)');
+			
 			logoTheme.src = 'source/icons/logo/logo.svg';
 			contactsTheme.src = 'source/img/contacts/contacts.jpg';
 			heroTheme.src = 'source/img/hero/bg.jpg';	
@@ -250,19 +253,98 @@ function themeBtnChange(e){
 			facebookTheme.src = 'source/icons/footer/fb.svg';
 			twiterTheme.src = 'source/icons/footer/tw.svg';
 			pintrestTheme.src = 'source/icons/footer/pinterest.svg';
+
 		}
 	}
 }
 
+const player = document.querySelector('.player');
+const video = player.querySelector('.viewer');
+const toggle = player.querySelector('.toggle');
+const playBtn = player.querySelector('.play-immage');
+const volumeBtn = player.querySelector('.volume-immage');
+const volume = player.querySelector('.volume');
+const progress = player.querySelector('.progress');
+const poster = player.querySelector('.video__poster');
+const centralPlayBtn = player.querySelector('.video__play-btn');
+const range = player.querySelectorAll('.range');
 
+function togglePlay(){
+	const method = video.paused ? 'play' : 'pause';
+	video[method]();
+}
 
+function updateButton(){
+	const icon = this.paused ? 'source/icons/video/play.svg' : 'source/icons/video/pause.svg';
+	playBtn.src = icon;
+	this.paused ? centralPlayBtn.style.display = 'block' : centralPlayBtn.style.display = 'none';
+}
 
+function volumeRangeUpdate(){
+	video[this.name] = this.value;
+	if (this.name === 'volume' && this.value === '0'){
+		volumeBtn.src = 'source/icons/video/mute.svg'
+		
+	} else {
+		volumeBtn.src = 'source/icons/video/volume.svg'
+	}
+	if (video.muted){
+		video.muted = !video.muted;
+	}
+}
 
+function progressRangeUpdate(){
+	video.currentTime = this.value*video.duration;
+		
+}
 
+function handleRangeUpdate(){
+	progress.value = video.currentTime/video.duration	;
+}
 
+function updateVolumeButton(){
+	video.muted = !video.muted;
+	if( video.muted) {
+		volumeBtn.src = 'source/icons/video/mute.svg'
+	}else {
+		volumeBtn.src = 'source/icons/video/volume.svg'
+	}
+}
 
+function posterHide(){
+	poster.style.display = 'none';
+	video.play();
+}
 
+function rangeProgress(){
+	const value = this.value*100;
+	const playerProgress = video.currentTime/video.duration*100;
+	console.log(this.name)
+	this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`;
+	progress.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${playerProgress}%, #c8c8c8 ${playerProgress}%, #c8c8c8 100%)`;
+}
 
+video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+video.addEventListener('timeupdate', handleRangeUpdate);
+video.addEventListener('timeupdate', rangeProgress);
 
+playBtn.addEventListener('click', togglePlay);
+
+volume.addEventListener('change', volumeRangeUpdate);
+volume.addEventListener('input', volumeRangeUpdate);
+volume.addEventListener('mouseup', function(){
+	
+});
+
+progress.addEventListener('change', progressRangeUpdate);
+progress.addEventListener('input', progressRangeUpdate);
+
+volumeBtn.addEventListener('click', updateVolumeButton);
+poster.addEventListener('click',posterHide);
+centralPlayBtn.addEventListener('click', posterHide);
+
+range.forEach(item => item.addEventListener('input', rangeProgress));
 
 
